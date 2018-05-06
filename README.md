@@ -1,51 +1,49 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Stacks and Queues Data Structures
-====
+# Lab 10 Stacks
+**Author**: Lacy Hogan
+**Version**: 1.0.1
 
-## To Submit this Assignment
-	* Read this document entirely and estimate how long this assignment will take.
-	* Work in a fork of this repository
-	* Work in a branch on your fork
-	* Protect your repository's `master` branch by activating `continuous-integration/travis-ci` status checks 
-	* Create a pull request from your `lab` + `<your name>` branch to your `master` branch
-	* Open a pull request to this repository
-	* Submit on canvas a question and observation,your original estimate, how long you spent, and a link to your pull request
+## Overview
+This applications creates a Stack constructor that uses 4 methods: push, pop, peek, and isEmpty. It requires in a Linked List and Node constructors. 
 
-## Requirements  
-#### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include   
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **__test__/** -- directory for holding your programs unit and integration tests
+## Getting Started
+As a user, you will need to have Nodemon installed on your computer in order to start the server.
 
-#### Testing  
-  * write at least three test assertions for each method of the Stack and Queue List Data Structures
-  * organize your tests into appropriate describe/test blocks for test output readability
+You will need to include the following scripts in your package.json in order to run the tests and nodemon:
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+ "scripts": {
+    "test": "eslint . && jest --coverage",
+    "start": "nodemon main.js"
 
-#### Feature Tasks  
-  * implement a Stack Class  using,internally, a Linked List class
-  * implement `push(value)` and `pop()` methods on the Stack class
-	* implement `peek()` and `isEmpty()` methods on the Stack class
+You will need to init the following dependencies and devDependencies before utilizing this application:
 
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "superagent": "^3.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "winston": "^3.0.0-rc5"
+  }
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+Create a .env file and include the following:
+NODE_ENV=development
+PORT=3000
+
+## Architecture
+This application is written in JavaScript and uses Node.js. You will need nodemon installed.  
+
+The test will be run using jest. In one terminal, run the command: nodemon index.js. Then, in a separate terminal, run the commands: npm run test.
+
+
+## Change Log
+04-27-2018 5:34pm - Application functions created and passing all tests
+
+## Credits and Collaborations

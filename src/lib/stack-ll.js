@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('../../../05-linked-list/src/lib/linked-list');
+const LinkedList = require('./linked-list');
 
 class Stack {
   constructor() {
